@@ -36,7 +36,7 @@ int nthpowerp(int n)
 {
     int i, result ;
 
-    for (i = 2; i < n; i++)
+    for (i = 1; i < n; i++)
     {
         result *= 2;
     }
@@ -48,7 +48,7 @@ int nthpowern(int n)
 {
     int i, result;
 
-    for (i = 1/2; i < n; i++)
+    for (i = 1; i < n; i++)
     {
         result = 1/2;
         result *=  1/2;
