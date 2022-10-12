@@ -15,31 +15,32 @@ int main()
     if (n>0)
     {
         result = nthpowerp(n);
-        printout(result);
     }
 
     else if (n<0)
     {
         result = nthpowern(n);
-        printout(result);
     }
 
     else
     {
         result = 1;
-        printout(result);
     }
-    
+    printout(result);
 }
 
 int nthpowerp(int n)
 {
-    int i, result ;
+    int i, result;
 
-    for (i = 1; i < n; i++)
+    result = 1;
+
+    while (n > 0)
     {
-        result *= 2;
+      result *= 2;
+      n -=1; 
     }
+    
     return result;
 
 }
@@ -48,15 +49,20 @@ int nthpowern(int n)
 {
     int i, result;
 
-    for (i = 1; i < n; i++)
+    result = 1;
+
+    while (n > 0)
     {
-        result = 1/2;
-        result *=  1/2;
+      result *= 1/2;
+      n -=1; 
     }
+    
     return result;
+
 }
 
 void printout(int result)
 {
     cout << result << endl;
+    
 }
