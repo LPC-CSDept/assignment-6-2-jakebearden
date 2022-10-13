@@ -3,12 +3,14 @@
 #include <iostream>
 using namespace std;
 
-void printout(int result);
-int nthpowern(int n);
+void printout(float result);
+float nthpowern(int n);
 int nthpowerp(int n);
+
 int main()
 {
-    int i, n, result;
+    int i, n; 
+    float result;
     cout << "Enter input" << endl;
     cin >> n;
 
@@ -45,15 +47,15 @@ int nthpowerp(int n)
 
 }
 
-int nthpowern(int n)
+float nthpowern(int n)
 {
-    int i, result;
+    float result;
 
-    result = 1/2;
+    result = 1;
 
     while (n < 0)
     {
-      result *= 1/2;
+      result *= 1.0 / 2.0;
       n +=1; 
     }
     
@@ -61,7 +63,7 @@ int nthpowern(int n)
 
 }
 
-void printout(int result)
+void printout(float result)
 {
     cout << result << endl;
     
